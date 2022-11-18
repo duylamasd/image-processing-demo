@@ -4,6 +4,7 @@ import {
   useRef,
   MouseEvent as ReactMouseEvent,
 } from "react";
+import { css } from "@emotion/react";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import RotateIcon from "@mui/icons-material/RotateLeft";
@@ -81,10 +82,10 @@ function App() {
         alignItems="center"
         justifyContent="center"
         flexGrow={1}
-        style={{ transform: `rotate(${angle}deg)` }}
+        css={css({ transform: `rotate(${angle}deg)` })}
       >
         <IconButton
-          color="info"
+          color="primary"
           onMouseDown={onRotateStart}
           onMouseMove={handleBoxMouseDown}
           onMouseUp={onRotateEnd}
